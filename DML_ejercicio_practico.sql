@@ -1,0 +1,66 @@
+-- Inserción de datos al Esquema del sistema bancario
+INSERT ALL
+	
+	--Inserción de datos para la tabla "USUARIOS"
+	INTO usuarios VALUES('99a0cced-18cb-4d6d-b6bf-ca3b4809c594','1111111', 'Angel', 'Fabian', 'Gomez', 
+			'Estupiñan', '3230000000', 'Carrera 6', 'Soata')
+	INTO usuarios VALUES('53cdcd02-0105-402b-ba18-10e0368fe1f3', '2222222', 'Hector', 'Mario', 'Gomez',
+			'Estupiñan', '3201111111', 'Carrera 1', 'Bucaramanga')
+	INTO usuarios VALUES('bb2e1f49-4390-4b73-b225-205443d7926c', '3333333', 'Andrés', 'David', 'Gomez', 
+			'Estupiñan', '3212222222', 'Carrera 2', 'Arabia')
+	INTO usuarios VALUES('6ba50785-8bd7-4040-a4a1-8e305ae486b2', '444444', 'Julian', 'Yesid', 'Gomez', 
+			'stupiñan', '3223333333', 'Carrera 3', 'Tunja')
+	INTO usuarios VALUES('7a9ab463-e988-4f50-9907-febb1e2a9c04',	'5555555', 'Alba', 'Elizabeth', 'Gomez', 
+			'Estupiñan', '3154444444', 'Carrera 4', 'Boavita')
+	INTO usuarios VALUES('4afb249d-d6a4-4afb-94a8-d5773bf3aa25',	'6666666', 'Maria', 'Rosalba', 'Estupiñan', 
+			'Salazar', '165555555', 'Carrera 5', 'Soatá')
+	INTO usuarios VALUES('30f1aa2b-9fe1-4f94-8267-db5067445035',	'7777777', 'Hector', 'Julio', 'Gomez', 
+			'Lizarazo', '3106666666', 'Carrera 6', 'Boavita')
+		
+
+	--Inserción de datos para la tabla "TIPOS_CUENTA"
+	INTO tipos_cuenta VALUES ('01', 'CAT', 'Cuenta de Ahorro Tradicional') 
+	INTO tipos_cuenta VALUES ('02', 'CATS', 'Cuenta de Ahorro de Tramite Simplificado')
+	INTO tipos_cuenta VALUES ('03', 'CDT', 'Cuenta de Deposito a Termino')
+
+
+	--Inserción de datos para la tabla "TIPOS_TRANSACCION"
+	INTO tipos_transaccion VALUES ('01', 'Consignacion', 'Añade dinero a cuenta (aumenta saldo)') 
+	INTO tipos_transaccion VALUES ('02', 'Retiro', 	'Retira dinero de cuenta (disminuye saldo)')
+	INTO tipos_transaccion VALUES ('03', 'Consulta', 'Consulta dinero en cuenta (saldo)')
+
+
+	--Inserción de datos para la tabla "INTERESES"
+	INTO intereses VALUES (1, 0.015, SYSDATE) 
+
+
+	--Inserción de datos para la tabla "SUCURSALES"
+	INTO sucursales VALUES (1, 'Calle 1', 'Soatá') 
+	INTO sucursales VALUES (2, 'Calle 2', 'Bucaramanga')
+	INTO sucursales VALUES (3, 'Calle 3', 'Tunja')
+	INTO sucursales VALUES (4, 'Calle 4', 'Bogotá')
+
+
+	--Inserción de datos para la tabla "CUENTAS"
+	INTO cuentas VALUES ('00001', '99a0cced-18cb-4d6d-b6bf-ca3b4809c594', '01', 1, 5000, SYSDATE) 
+	INTO cuentas VALUES ('00002', '53cdcd02-0105-402b-ba18-10e0368fe1f3', '02', 2, 6000, SYSDATE)
+	INTO cuentas VALUES ('00003', '99a0cced-18cb-4d6d-b6bf-ca3b4809c594', '03', 3, 7000, SYSDATE)
+	INTO cuentas VALUES ('00004', 'bb2e1f49-4390-4b73-b225-205443d7926c', '01', 4, 8000, SYSDATE)
+	INTO cuentas VALUES ('00005', '6ba50785-8bd7-4040-a4a1-8e305ae486b2', '01', 4, 9000, SYSDATE)
+	INTO cuentas VALUES ('00006', 'bb2e1f49-4390-4b73-b225-205443d7926c', '02', 4, 10000, SYSDATE)
+	INTO cuentas VALUES ('00007', 'bb2e1f49-4390-4b73-b225-205443d7926c', '03', 4, 11000, SYSDATE)
+	INTO cuentas VALUES ('00008', '7a9ab463-e988-4f50-9907-febb1e2a9c04', '02', 4, 12000, SYSDATE)
+	INTO cuentas VALUES ('00009', '6ba50785-8bd7-4040-a4a1-8e305ae486b2', '03', 4, 13000, SYSDATE)
+	INTO cuentas VALUES ('00010', '4afb249d-d6a4-4afb-94a8-d5773bf3aa25', '01', 4, 14000, SYSDATE)
+
+SELECT * FROM DUAL;
+
+
+--Comprobación de Inserciones por tabla
+--SELECT * FROM usuarios;
+--SELECT * FROM tipos_cuenta;
+--SELECT * FROM tipos_transaccion;
+--SELECT * FROM intereses;
+--SELECT * FROM sucursales;
+--SELECT * FROM cuentas;
+	
